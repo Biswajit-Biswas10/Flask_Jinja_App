@@ -1,7 +1,7 @@
 from app import app
 
 @app.route('/')
-@app.route('/home')
+@app.route('/About')
 
 def home():
     return "This is my first Flask Project."
