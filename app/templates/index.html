@@ -1,24 +1,26 @@
 {% extends 'base.html' %}
 
-{% block title %}Home | Flask App {% end block%}
+{% block title %}Home | Flask App {% endblock%}
 
 
 {% block content%}
 
 <!-- Example of if statement -->
-<h1>welcome, {{ user.name }}!</h1>
+<h1>Welcome, {{ user.name }}!</h1>
 {% if user.is_authenticated %}
     <p>You are logged in.</p>
 {% else %}
     <p>Please log in.</p>
-{% end if %}
+{% endif %}
 
 <!-- Example of for loop -->
-<h2>Your skill</h2>
+<h2>Your technical skills:</h2>
 <ul>
     {% for skill in skills %}
-        <li>{{ loop.index }}.{{ skill|upper }}</li>
-    {% end for %}
+        <li> {{ skill|capitalize }} </li>
+    {% endfor %}
 </ul>
 
 {% endblock %}
+
+<!-- <li> {{ loop.index }} {{ skill|capitalize }} </li> -->

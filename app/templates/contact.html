@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}Contact Me{% endblock %}
+
+{% block content %}
+
+<div class="contact-section">
+<h1>Contact Me</h1>
+<p>Feel free to get in touch with me through any of the following platforms:</p>
+
+    <div class="contact-cards">
+
+        <div class="contact-card">
+            <div class="contact-icon">📧</div>
+            <h3>Email</h3>
+            <p>Drop me a line anytime</p>
+            <a href="mailto:{{ contact.email }}" class="btn btn-primary">{{ contact.email }}"></a>
+        </div>
+
+        <div class="contact-card">
+            <div class="contact-icon">💼</div>
+            <h3>LinkedIn</h3>
+            <p>Let's connect professionally</p>
+            <a href="{{ contact.linkedin }}" target="_blank" class="btn btn-success">View Profile</a>
+        </div>
+
+        <div class="contact-card">
+            <div class="contact-icon">🐙</div>
+            <h3>GitHub</h3>
+            <p>Check out my projects</p>
+            <a href="{{ contact.github }}" target="_blank" class="btn btn-secondary">View Repository</a>
+        </div>
+
+
+    </div>
+
+</div>
+
+
+{% endblock %}
